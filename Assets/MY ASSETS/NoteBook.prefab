@@ -340,9 +340,6 @@ MonoBehaviour:
   - title: "Caso: Ladr\xF3n"
     bodyText: "He llegado a la casa del presunto ladr\xF3n.\nNo parece haber mucho a simple vista, deberia usar mi lupa para encontrar evidencia escondida."
     clueImage: {fileID: 0}
-  - title: 'Evidencia 1: Reloj'
-    bodyText: 
-    clueImage: {fileID: 0}
   triggerAction: {fileID: 0}
 --- !u!1 &6833748979405435415
 GameObject:
