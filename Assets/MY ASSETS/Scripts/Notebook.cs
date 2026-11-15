@@ -1,9 +1,10 @@
+using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
+using UnityEngine.InputSystem;
 using UnityEngine.UI;
 using UnityEngine.XR.Interaction.Toolkit;
-using TMPro;
-using System.Collections.Generic;
-using UnityEngine.InputSystem;
+using UnityEngine.XR.Interaction.Toolkit.Interactables;
 
 public class NotebookManager : MonoBehaviour
 {
@@ -21,10 +22,10 @@ public class NotebookManager : MonoBehaviour
     public TextMeshProUGUI pageBodyText;
     public Image clueImageUI;
 
-    [Header("Animacion")]
+    [Header("Animación")]
     public Animator notebookAnimator;
 
-    [Header("Configuracion de Paginas")]
+    [Header("Configuración de Páginas")]
     [SerializeField]
     private List<NotebookPage> notebookPages = new List<NotebookPage> {
         new NotebookPage {
@@ -35,52 +36,57 @@ public class NotebookManager : MonoBehaviour
     };
 
     private int currentPageIndex = 0;
-    private UnityEngine.XR.Interaction.Toolkit.Interactables.XRGrabInteractable grabInteractable;
+    private XRGrabInteractable grabInteractable;
     private bool isHeld = false;
-
-    [Header("Input del Trigger")]
-    public InputActionReference triggerAction;
 
     void Awake()
     {
-        grabInteractable = GetComponent<UnityEngine.XR.Interaction.Toolkit.Interactables.XRGrabInteractable>();
+        grabInteractable = GetComponent<XRGrabInteractable>();
     }
 
     void OnEnable()
     {
-        grabInteractable.selectEntered.AddListener(OnGrabbed);
-        grabInteractable.selectExited.AddListener(OnReleased);
-
-        if (triggerAction != null && triggerAction.action != null)
+        if (grabInteractable != null)
         {
-            triggerAction.action.performed += OnTriggerPerformed;
-            triggerAction.action.Enable();
+            grabInteractable.selectEntered.AddListener(OnGrabbed);
+            grabInteractable.selectExited.AddListener(OnReleased);
         }
     }
+
     void OnDisable()
     {
-        grabInteractable.selectEntered.RemoveListener(OnGrabbed);
-        grabInteractable.selectExited.RemoveListener(OnReleased);
-
-        if (triggerAction != null && triggerAction.action != null)
+        if (grabInteractable != null)
         {
-            triggerAction.action.performed -= OnTriggerPerformed;
-            triggerAction.action.Disable();
+            grabInteractable.selectEntered.RemoveListener(OnGrabbed);
+            grabInteractable.selectExited.RemoveListener(OnReleased);
         }
     }
+
     private void OnGrabbed(SelectEnterEventArgs args) => isHeld = true;
-    private void OnReleased(SelectExitEventArgs args) => isHeld = false;
+
+    private void OnReleased(SelectExitEventArgs args)
+    {
+        isHeld = false;
+
+        if (currentPageIndex != 0)
+        {
+            currentPageIndex = 0;
+
+            if (notebookAnimator != null)
+            {
+                notebookAnimator.ResetTrigger("TurnPage");
+                notebookAnimator.ResetTrigger("ResetPage");
+
+                notebookAnimator.SetTrigger("ResetPage");
+            }
+
+            UpdateNotebookUI();
+        }
+    }
+
     void Update()
     {
         if (isHeld && Keyboard.current != null && Keyboard.current.tKey.wasPressedThisFrame)
-        {
-            NextPage();
-        }
-    }
-
-    private void OnTriggerPerformed(InputAction.CallbackContext context)
-    {
-        if (isHeld)
         {
             NextPage();
         }
@@ -90,11 +96,13 @@ public class NotebookManager : MonoBehaviour
     {
         if (notebookPages.Count <= 1) return;
 
-        int previousIndex = currentPageIndex;
         currentPageIndex = (currentPageIndex + 1) % notebookPages.Count;
 
         if (notebookAnimator != null)
         {
+            notebookAnimator.ResetTrigger("TurnPage");
+            notebookAnimator.ResetTrigger("ResetPage");
+
             if (currentPageIndex == 0)
             {
                 notebookAnimator.SetTrigger("ResetPage");
@@ -118,8 +126,6 @@ public class NotebookManager : MonoBehaviour
         };
 
         notebookPages.Add(newPage);
-        currentPageIndex = notebookPages.Count - 1;
-        UpdateNotebookUI();
     }
 
     private void UpdateNotebookUI()
