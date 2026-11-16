@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 7989883307486624088}
   - component: {fileID: 7366383612422449777}
   - component: {fileID: 78741809563372737}
-  m_Layer: 5
+  m_Layer: 6
   m_Name: Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -118,7 +118,8 @@ GameObject:
   - component: {fileID: 702514661660322441}
   - component: {fileID: 146005620235031357}
   - component: {fileID: 4913709413173205077}
-  m_Layer: 0
+  - component: {fileID: 172713059184845498}
+  m_Layer: 6
   m_Name: NoteBook
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -186,7 +187,7 @@ Rigidbody:
   m_ImplicitCom: 1
   m_ImplicitTensor: 1
   m_UseGravity: 1
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
@@ -340,7 +341,18 @@ MonoBehaviour:
   - title: "Caso: Ladr\xF3n"
     bodyText: "He llegado a la casa del presunto ladr\xF3n.\nNo parece haber mucho a simple vista, deberia usar mi lupa para encontrar evidencia escondida."
     clueImage: {fileID: 0}
-  triggerAction: {fileID: 0}
+--- !u!114 &172713059184845498
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5105128014468046170}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 64d68b2052be6f542abd4f8b28daa77c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::HolsterReturn
 --- !u!1 &6833748979405435415
 GameObject:
   m_ObjectHideFlags: 0
@@ -352,7 +364,7 @@ GameObject:
   - component: {fileID: 965323489265529151}
   - component: {fileID: 4317417197356722160}
   - component: {fileID: 6520145004356730351}
-  m_Layer: 5
+  m_Layer: 6
   m_Name: BodyText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -489,7 +501,7 @@ GameObject:
   - component: {fileID: 4227262640163637630}
   - component: {fileID: 1388477735653593628}
   - component: {fileID: 895912760605909794}
-  m_Layer: 5
+  m_Layer: 6
   m_Name: TitleText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -626,7 +638,7 @@ GameObject:
   - component: {fileID: 6832070545844082566}
   - component: {fileID: 5862627868884820185}
   - component: {fileID: 7655409193013120767}
-  m_Layer: 5
+  m_Layer: 6
   m_Name: Image
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -754,9 +766,69 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: -7553238816612254548, guid: 2bd1011418187254fa9eb0a1047a8387, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: -6522695966643703301, guid: 2bd1011418187254fa9eb0a1047a8387, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: -6186445797578003153, guid: 2bd1011418187254fa9eb0a1047a8387, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: -4568204487915348503, guid: 2bd1011418187254fa9eb0a1047a8387, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 2bd1011418187254fa9eb0a1047a8387, type: 3}
       propertyPath: m_Name
       value: Notes
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 2bd1011418187254fa9eb0a1047a8387, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 1790183945725220954, guid: 2bd1011418187254fa9eb0a1047a8387, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 2480909740878747892, guid: 2bd1011418187254fa9eb0a1047a8387, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 3232139248958402236, guid: 2bd1011418187254fa9eb0a1047a8387, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 3852929629529721487, guid: 2bd1011418187254fa9eb0a1047a8387, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 4819001077394492298, guid: 2bd1011418187254fa9eb0a1047a8387, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 6905609870639353253, guid: 2bd1011418187254fa9eb0a1047a8387, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 7036213049465896255, guid: 2bd1011418187254fa9eb0a1047a8387, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 7649307984373867853, guid: 2bd1011418187254fa9eb0a1047a8387, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 7953085446890567447, guid: 2bd1011418187254fa9eb0a1047a8387, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 9178353486837351355, guid: 2bd1011418187254fa9eb0a1047a8387, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
