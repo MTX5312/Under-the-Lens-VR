@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 6579865805754261179}
   - component: {fileID: 9205722267516284692}
   m_Layer: 3
-  m_Name: Key
+  m_Name: Llave
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -285,8 +285,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c7327df0fea8b4443a9d3caac5614ea9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Clue
-  clueTitle: Key
-  clueDescription: Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum
+  clueTitle: 'Llave: Oficina'
+  clueDescription: Llave que abre la puerta de la oficina, debe esconder algo importante dentro.
   clueSprite: {fileID: 1694913177206695654, guid: 4b19f67e9ae60bb45bb441123648f189, type: 3}
   destroyOnCollect: 1
 --- !u!1 &5197564428637678306
