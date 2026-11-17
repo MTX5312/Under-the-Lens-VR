@@ -342,6 +342,8 @@ UnityEngine.Application::get_version_Injected
 UnityEngine.Application::set_targetFrameRate
 UnityEngine.Application::get_platform
 UnityEngine.AssetBundle::LoadAsset_Internal_Injected
+UnityEngine.AsyncOperation::InternalDestroy
+UnityEngine.AsyncOperation::InternalSetManagedObject
 UnityEngine.Audio.SampleProviderBindings::CreateGeneratorHeader_Injected
 UnityEngine.Audio.ScriptableProcessorBindings::CheckProcessorExistsInternal_Injected
 UnityEngine.AudioClip::IsLegacyFormat_Injected
@@ -1602,6 +1604,7 @@ UnityEngine.SceneManagement.Scene::GetRootGameObjectsInternalList_Injected
 UnityEngine.SceneManagement.SceneManager::get_sceneCount
 UnityEngine.SceneManagement.SceneManager::GetActiveScene_Injected
 UnityEngine.SceneManagement.SceneManager::GetSceneAt_Injected
+UnityEngine.SceneManagement.SceneManagerAPIInternal::LoadSceneAsyncNameIndexInternal_Injected
 UnityEngine.Screen::get_fullScreen
 UnityEngine.Screen::GetCurrentBackbufferMSAASamplesInternal
 UnityEngine.Screen::GetMSAASamples
