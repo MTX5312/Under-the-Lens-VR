@@ -278,7 +278,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Clue
   clueTitle: Guantes
   clueDescription: 'Guantes de latex usados, fueron lavados no hace mucho. Probablemente fueron usados durante el robo. '
-  clueSprite: {fileID: 0}
+  clueSprite: {fileID: 6829406338367461404, guid: d5c90a7e4c53ee74786e7b8f7ff84670, type: 3}
   destroyOnCollect: 1
 --- !u!4 &3378824040553752676 stripped
 Transform:

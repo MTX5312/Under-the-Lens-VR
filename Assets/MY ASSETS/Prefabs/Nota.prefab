@@ -130,7 +130,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Clue
   clueTitle: 
   clueDescription: 
-  clueSprite: {fileID: 0}
+  clueSprite: {fileID: -4841720520028814253, guid: 68af33cf9ff711a4e976ab98172f7be8, type: 3}
   destroyOnCollect: 1
 --- !u!54 &8100351244371945565
 Rigidbody:

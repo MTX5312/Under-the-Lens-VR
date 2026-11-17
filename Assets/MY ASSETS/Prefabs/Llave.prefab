@@ -287,7 +287,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Clue
   clueTitle: 'Llave: Oficina'
   clueDescription: Llave que abre la puerta de la oficina, debe esconder algo importante dentro.
-  clueSprite: {fileID: 1694913177206695654, guid: 4b19f67e9ae60bb45bb441123648f189, type: 3}
+  clueSprite: {fileID: 1694913177206695654, guid: fed32b660d2cda04ea8fa3057eb9bced, type: 3}
   destroyOnCollect: 1
 --- !u!1 &5197564428637678306
 GameObject:
