@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.Events;
 
-public class VRLever : MonoBehaviour
+public class Lever : MonoBehaviour
 {
     public Animator leverAnimator;
     public string animatorParameter = "LeverUp";
@@ -21,6 +21,7 @@ public class VRLever : MonoBehaviour
     {
         if (isActivated) return;
         isActivated = true;
+        Debug.Log("Activada!");
 
         if (leverAnimator != null)
         {

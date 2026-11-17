@@ -2870,15 +2870,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1577609632647162967, guid: a0164d9c476080e449c72cf58e7709ab, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -19.983
+      value: -19.976
       objectReference: {fileID: 0}
     - target: {fileID: 1577609632647162967, guid: a0164d9c476080e449c72cf58e7709ab, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.038
+      value: -0.186
       objectReference: {fileID: 0}
     - target: {fileID: 1577609632647162967, guid: a0164d9c476080e449c72cf58e7709ab, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 16.064
+      value: 16.065
       objectReference: {fileID: 0}
     - target: {fileID: 1577609632647162967, guid: a0164d9c476080e449c72cf58e7709ab, type: 3}
       propertyPath: m_LocalRotation.w
@@ -2912,6 +2912,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Lever_Prefab
       objectReference: {fileID: 0}
+    - target: {fileID: 2575938327731363396, guid: a0164d9c476080e449c72cf58e7709ab, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 7727883797297684363, guid: a0164d9c476080e449c72cf58e7709ab, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 8547448563377378517, guid: a0164d9c476080e449c72cf58e7709ab, type: 3}
       propertyPath: m_Layer
       value: 6
@@ -2930,6 +2938,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 8547448563377378517, guid: a0164d9c476080e449c72cf58e7709ab, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1756644957}
+    - targetCorrespondingSourceObject: {fileID: 8547448563377378517, guid: a0164d9c476080e449c72cf58e7709ab, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1756644961}
   m_SourcePrefab: {fileID: 100100000, guid: a0164d9c476080e449c72cf58e7709ab, type: 3}
 --- !u!1 &393968522
 GameObject:
@@ -12399,9 +12410,9 @@ CapsuleCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: 0.14874522
-  m_Height: 0.044060774
-  m_Direction: 1
-  m_Center: {x: 0.000000007450581, y: -0.0000000027939677, z: 0.14874522}
+  m_Height: 0.45320934
+  m_Direction: 2
+  m_Center: {x: 0, y: 1.2246572e-16, z: 0.07785943}
 --- !u!114 &1756644956
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12415,7 +12426,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::VRLever
   leverAnimator: {fileID: 1756644952}
-  animatorParameter: isActivated
+  animatorParameter: LeverUp
   useTriggerInsteadOfBool: 1
   targetDoor: {fileID: 808343632}
   onLeverPulled:
@@ -12446,10 +12457,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Unity.XR.Interaction.Toolkit::UnityEngine.XR.Interaction.Toolkit.Interactables.XRSimpleInteractable
   m_InteractionManager: {fileID: 0}
-  m_Colliders: []
+  m_Colliders:
+  - {fileID: 1756644955}
   m_InteractionLayers:
     m_Bits: 1
-  m_DistanceCalculationMode: 1
+  m_DistanceCalculationMode: 2
   m_SelectMode: 0
   m_FocusMode: 1
   m_CustomReticle: {fileID: 0}
@@ -12480,7 +12492,19 @@ MonoBehaviour:
       m_Calls: []
   m_SelectEntered:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1756644956}
+        m_TargetAssemblyTypeName: Lever, Assembly-CSharp
+        m_MethodName: ToggleLever
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_SelectExited:
     m_PersistentCalls:
       m_Calls: []
@@ -12498,7 +12522,19 @@ MonoBehaviour:
       m_Calls: []
   m_Activated:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1756644956}
+        m_TargetAssemblyTypeName: Lever, Assembly-CSharp
+        m_MethodName: ToggleLever
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_Deactivated:
     m_PersistentCalls:
       m_Calls: []
@@ -12507,6 +12543,33 @@ MonoBehaviour:
   m_StartingInteractionStrengthFilters: []
   m_AutoFindParentInteractableInHierarchy: 0
   m_ParentInteractableObject: {fileID: 0}
+--- !u!54 &1756644961
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1756644949}
+  serializedVersion: 5
+  m_Mass: 1
+  m_LinearDamping: 0
+  m_AngularDamping: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &1759363192 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5058766338363925637, guid: c4bf1b0306a7f8b4494f23e64110f080, type: 3}
@@ -13168,6 +13231,34 @@ PrefabInstance:
     - target: {fileID: 6579865805754261179, guid: e17f08dbe6c6b064b90d006e3c9c7e83, type: 3}
       propertyPath: m_InteractionLayers.m_Bits
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6579865805754261179, guid: e17f08dbe6c6b064b90d006e3c9c7e83, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6579865805754261179, guid: e17f08dbe6c6b064b90d006e3c9c7e83, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6579865805754261179, guid: e17f08dbe6c6b064b90d006e3c9c7e83, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1449439302}
+    - target: {fileID: 6579865805754261179, guid: e17f08dbe6c6b064b90d006e3c9c7e83, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6579865805754261179, guid: e17f08dbe6c6b064b90d006e3c9c7e83, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: UnlockDoor
+      objectReference: {fileID: 0}
+    - target: {fileID: 6579865805754261179, guid: e17f08dbe6c6b064b90d006e3c9c7e83, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: DoorLock, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 6579865805754261179, guid: e17f08dbe6c6b064b90d006e3c9c7e83, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
