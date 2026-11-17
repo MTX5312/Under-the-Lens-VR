@@ -14,6 +14,11 @@ public class Clue : MonoBehaviour
     [Tooltip("Imagen de la pagina")]
     public Sprite clueSprite;
 
+    [Header("Feedback Audiovisual")]
+    public string clueDisplayName = "Nota misteriosa";
+    public AudioClip pickupSound;
+    [Range(0f, 1f)] public float soundVolume = 1f;
+
     [Header("Recogido")]
     public bool destroyOnCollect = true;
 
@@ -47,6 +52,11 @@ public class Clue : MonoBehaviour
         if (notebook != null)
         {
             notebook.AddNewClue(clueTitle, clueDescription, clueSprite);
+            if (pickupSound != null)
+                AudioSource.PlayClipAtPoint(pickupSound, transform.position, soundVolume);
+
+            if (VRNotificationHUD.Instance != null)
+                VRNotificationHUD.Instance.ShowNotification($"{clueDisplayName} recolectada");
             Debug.Log($"Pista registrada: {clueTitle}");
         }
         else

@@ -1069,79 +1069,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 637984315911060732, guid: db25d2b389bb0f8478e7e515c8f76426, type: 3}
   m_PrefabInstance: {fileID: 124550559}
   m_PrefabAsset: {fileID: 0}
---- !u!1001 &131232121
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 3057266079890844555, guid: 524ceb72d6e96e947b54ec80eb30d4aa, type: 3}
-      propertyPath: m_TranslateSpace
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3057266079890844555, guid: 524ceb72d6e96e947b54ec80eb30d4aa, type: 3}
-      propertyPath: m_CameraTransform
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 3057266079890844555, guid: 524ceb72d6e96e947b54ec80eb30d4aa, type: 3}
-      propertyPath: m_LeftControllerTransform
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 3057266079890844555, guid: 524ceb72d6e96e947b54ec80eb30d4aa, type: 3}
-      propertyPath: m_RightControllerTransform
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 4143560435382428648, guid: 524ceb72d6e96e947b54ec80eb30d4aa, type: 3}
-      propertyPath: m_Name
-      value: XR Interaction Simulator
-      objectReference: {fileID: 0}
-    - target: {fileID: 9021644134196309356, guid: 524ceb72d6e96e947b54ec80eb30d4aa, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 65.43085
-      objectReference: {fileID: 0}
-    - target: {fileID: 9021644134196309356, guid: 524ceb72d6e96e947b54ec80eb30d4aa, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 9021644134196309356, guid: 524ceb72d6e96e947b54ec80eb30d4aa, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -15.799
-      objectReference: {fileID: 0}
-    - target: {fileID: 9021644134196309356, guid: 524ceb72d6e96e947b54ec80eb30d4aa, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 9021644134196309356, guid: 524ceb72d6e96e947b54ec80eb30d4aa, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 9021644134196309356, guid: 524ceb72d6e96e947b54ec80eb30d4aa, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 9021644134196309356, guid: 524ceb72d6e96e947b54ec80eb30d4aa, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 9021644134196309356, guid: 524ceb72d6e96e947b54ec80eb30d4aa, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 9021644134196309356, guid: 524ceb72d6e96e947b54ec80eb30d4aa, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 9021644134196309356, guid: 524ceb72d6e96e947b54ec80eb30d4aa, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 524ceb72d6e96e947b54ec80eb30d4aa, type: 3}
 --- !u!1001 &133493412
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2017,11 +1944,11 @@ GameObject:
   - component: {fileID: 229065876}
   - component: {fileID: 229065875}
   - component: {fileID: 229065880}
-  - component: {fileID: 229065879}
   - component: {fileID: 229065878}
+  - component: {fileID: 229065879}
   - component: {fileID: 229065881}
   m_Layer: 3
-  m_Name: BarraDeOro
+  m_Name: LingoteDeOro
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2112,8 +2039,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Clue
   clueTitle: Lingote de oro
-  clueDescription: 
+  clueDescription: Un lingote de oro que se encontraba en el banco el dia del robo, dicen que tiene un valor aun mayor debido a su antiguedad.
   clueSprite: {fileID: -6339536510091495527, guid: 3d57b9e35a0d7254d99f566c260c5cec, type: 3}
+  clueDisplayName: Lingote de Oro
+  pickupSound: {fileID: 8300000, guid: 6e8772b49f34d402a90016ed445d8a2f, type: 3}
+  soundVolume: 1
   destroyOnCollect: 1
 --- !u!114 &229065879
 MonoBehaviour:
@@ -3903,6 +3833,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DoorLock
   isLocked: 1
+  roomName: Dormitorio
+  unlockSound: {fileID: 8300000, guid: 9485bf88f1650ae478281426b0bff7aa, type: 3}
+  soundVolume: 0.75
 --- !u!1001 &521991012
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4284,6 +4217,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DoorLock
   isLocked: 1
+  roomName: "Ba\xF1o"
+  unlockSound: {fileID: 8300000, guid: 9485bf88f1650ae478281426b0bff7aa, type: 3}
+  soundVolume: 0.75
 --- !u!1 &546477872 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1891728995701575361, guid: 067d5bb396a6e944fb84f037fb021cbf, type: 3}
@@ -5031,6 +4967,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DoorLock
   isLocked: 1
+  roomName: Principal
+  unlockSound: {fileID: 0}
+  soundVolume: 1
 --- !u!4 &631875887 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2659831290320659949, guid: 0f76c48cd54d56d56807965a47e5bce4, type: 3}
@@ -5872,6 +5811,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DoorLock
   isLocked: 1
+  roomName: Almacen
+  unlockSound: {fileID: 8300000, guid: cb812129f07a5ed42a252ea8fd180f82, type: 3}
+  soundVolume: 1
 --- !u!1001 &854837005
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6186,8 +6128,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Clue
   clueTitle: Recibos
-  clueDescription: 
+  clueDescription: Estos son recibos de multiples compras hechas antes del robo, algunos de estos objetos fueron encontrados en la escena del crimen.
   clueSprite: {fileID: 4960675676672542279, guid: 06b9a5c5fea48d447a2f013ba7c07ae2, type: 3}
+  clueDisplayName: Recibos
+  pickupSound: {fileID: 8300000, guid: 6e8772b49f34d402a90016ed445d8a2f, type: 3}
+  soundVolume: 1
   destroyOnCollect: 1
 --- !u!1 &869392780
 GameObject:
@@ -6628,6 +6573,14 @@ PrefabInstance:
     - target: {fileID: 282539031150554931, guid: 0e0fa2a98fc6ea04097793ed7508d2a4, type: 3}
       propertyPath: m_Layer
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 941057827117305791, guid: 0e0fa2a98fc6ea04097793ed7508d2a4, type: 3}
+      propertyPath: pickupSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 6e8772b49f34d402a90016ed445d8a2f, type: 3}
+    - target: {fileID: 941057827117305791, guid: 0e0fa2a98fc6ea04097793ed7508d2a4, type: 3}
+      propertyPath: clueDisplayName
+      value: Guantes
       objectReference: {fileID: 0}
     - target: {fileID: 2713469613902000862, guid: 0e0fa2a98fc6ea04097793ed7508d2a4, type: 3}
       propertyPath: m_Name
@@ -10423,6 +10376,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DoorLock
   isLocked: 1
+  roomName: Estudio
+  unlockSound: {fileID: 8300000, guid: cb812129f07a5ed42a252ea8fd180f82, type: 3}
+  soundVolume: 1
 --- !u!1001 &1488109561
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -11821,6 +11777,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DoorLock
   isLocked: 1
+  roomName: Principal
+  unlockSound: {fileID: 0}
+  soundVolume: 1
 --- !u!1001 &1651666033
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -13259,6 +13218,14 @@ PrefabInstance:
     - target: {fileID: 6579865805754261179, guid: e17f08dbe6c6b064b90d006e3c9c7e83, type: 3}
       propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 9205722267516284692, guid: e17f08dbe6c6b064b90d006e3c9c7e83, type: 3}
+      propertyPath: pickupSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 6e8772b49f34d402a90016ed445d8a2f, type: 3}
+    - target: {fileID: 9205722267516284692, guid: e17f08dbe6c6b064b90d006e3c9c7e83, type: 3}
+      propertyPath: clueDisplayName
+      value: 'Llave: Oficina'
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -14905,8 +14872,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Clue
   clueTitle: Plano
-  clueDescription: 
+  clueDescription: Un plano del banco que compromete directamente al acusado, ya sea como complice o el culpable directo.
   clueSprite: {fileID: -4882626279223116940, guid: 264ecd22fee99e949b1dd2bc84816a14, type: 3}
+  clueDisplayName: Plano
+  pickupSound: {fileID: 8300000, guid: 6e8772b49f34d402a90016ed445d8a2f, type: 3}
+  soundVolume: 1
   destroyOnCollect: 1
 --- !u!114 &2020412996
 MonoBehaviour:
@@ -16064,8 +16034,16 @@ PrefabInstance:
       value: Nota sospechosa
       objectReference: {fileID: 0}
     - target: {fileID: 3128136288451284303, guid: b9813efb30c55e74db99a7ea80b0ae3a, type: 3}
+      propertyPath: pickupSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 6e8772b49f34d402a90016ed445d8a2f, type: 3}
+    - target: {fileID: 3128136288451284303, guid: b9813efb30c55e74db99a7ea80b0ae3a, type: 3}
       propertyPath: clueDescription
       value: "Una nota con informaci\xF3n para encontrarse en un punto cercano al banco."
+      objectReference: {fileID: 0}
+    - target: {fileID: 3128136288451284303, guid: b9813efb30c55e74db99a7ea80b0ae3a, type: 3}
+      propertyPath: clueDisplayName
+      value: Nota Sospechosa
       objectReference: {fileID: 0}
     - target: {fileID: 4117233253729214801, guid: b9813efb30c55e74db99a7ea80b0ae3a, type: 3}
       propertyPath: m_Name
@@ -16129,7 +16107,6 @@ SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
   - {fileID: 1346878580}
-  - {fileID: 131232121}
   - {fileID: 1579278873}
   - {fileID: 660095974}
   - {fileID: 1039722155}
