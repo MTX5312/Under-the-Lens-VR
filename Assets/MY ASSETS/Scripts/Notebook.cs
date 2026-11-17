@@ -6,7 +6,7 @@ using UnityEngine.UI;
 using UnityEngine.XR.Interaction.Toolkit;
 using UnityEngine.XR.Interaction.Toolkit.Interactables;
 
-public class NotebookManager : MonoBehaviour
+public class Notebook : MonoBehaviour
 {
     [System.Serializable]
     public struct NotebookPage
@@ -38,6 +38,11 @@ public class NotebookManager : MonoBehaviour
     private int currentPageIndex = 0;
     private XRGrabInteractable grabInteractable;
     private bool isHeld = false;
+
+    void Start()
+    {
+        UpdateNotebookUI();
+    }
 
     void Awake()
     {
@@ -151,8 +156,8 @@ public class NotebookManager : MonoBehaviour
         }
     }
 
-    void Start()
+    public int GetCollectedCluesCount()
     {
-        UpdateNotebookUI();
+        return notebookPages.Count;
     }
 }

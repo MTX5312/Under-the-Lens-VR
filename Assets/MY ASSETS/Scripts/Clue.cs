@@ -4,7 +4,7 @@ using UnityEngine.XR.Interaction.Toolkit;
 public class Clue : MonoBehaviour
 {
     [Header("Informacion de la Pista")]
-    [Tooltip("El titulo de la pagina")]
+    [Tooltip("Titulo de la pagina")]
     public string clueTitle = "";
 
     [TextArea(3, 10)]
@@ -42,7 +42,7 @@ public class Clue : MonoBehaviour
 
     private void OnClueCollected(SelectEnterEventArgs args)
     {
-        NotebookManager notebook = FindAnyObjectByType<NotebookManager>();
+        Notebook notebook = FindAnyObjectByType<Notebook>();
 
         if (notebook != null)
         {
