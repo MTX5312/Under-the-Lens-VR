@@ -22,10 +22,13 @@ public class Notebook : MonoBehaviour
     public TextMeshProUGUI pageBodyText;
     public Image clueImageUI;
 
-    [Header("Animaci�n")]
+    [Header("Animación")]
     public Animator notebookAnimator;
 
-    [Header("Configuraci�n de P�ginas")]
+    [Header("Input VR (Trigger para pasar de página)")]
+    public InputActionProperty turnPageTriggerAction;
+
+    [Header("Configuración de Páginas")]
     [SerializeField]
     private List<NotebookPage> notebookPages = new List<NotebookPage> {
         new NotebookPage {
@@ -39,14 +42,14 @@ public class Notebook : MonoBehaviour
     private XRGrabInteractable grabInteractable;
     private bool isHeld = false;
 
-    void Start()
-    {
-        UpdateNotebookUI();
-    }
-
     void Awake()
     {
         grabInteractable = GetComponent<XRGrabInteractable>();
+    }
+
+    void Start()
+    {
+        UpdateNotebookUI();
     }
 
     void OnEnable()
@@ -56,6 +59,12 @@ public class Notebook : MonoBehaviour
             grabInteractable.selectEntered.AddListener(OnGrabbed);
             grabInteractable.selectExited.AddListener(OnReleased);
         }
+
+        if (turnPageTriggerAction.action != null)
+        {
+            turnPageTriggerAction.action.Enable();
+            turnPageTriggerAction.action.performed += OnTurnPageTriggered;
+        }
     }
 
     void OnDisable()
@@ -64,6 +73,11 @@ public class Notebook : MonoBehaviour
         {
             grabInteractable.selectEntered.RemoveListener(OnGrabbed);
             grabInteractable.selectExited.RemoveListener(OnReleased);
+        }
+
+        if (turnPageTriggerAction.action != null)
+        {
+            turnPageTriggerAction.action.performed -= OnTurnPageTriggered;
         }
     }
 
@@ -87,6 +101,13 @@ public class Notebook : MonoBehaviour
 
             UpdateNotebookUI();
         }
+    }
+
+    private void OnTurnPageTriggered(InputAction.CallbackContext context)
+    {
+        if (!isHeld) return;
+
+        NextPage();
     }
 
     void Update()

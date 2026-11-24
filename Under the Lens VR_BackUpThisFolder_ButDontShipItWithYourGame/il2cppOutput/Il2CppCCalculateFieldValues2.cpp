@@ -834,6 +834,7 @@ struct IRuntimePanel_t99EB6174C71C1EA146F39B04594818FB9BB8BBEC;
 struct IScrollHandler_t762CB73017D561E11CF6759ED9FD8C9F24B3D13F;
 struct ITextPreprocessor_tDBB49C8B68D7B80E8D233B9D9666C43981EFAAB9;
 struct Image_tBC1D03F63BF71132E9A5E472B8742F172A011E7E;
+struct InputAction_t1B550AD2B55AF322AFB53CD28DA64081220D01CD;
 struct InputActionReference_t64730C6B41271E0983FC21BFB416169F5D6BC4A1;
 struct InputDevice_t8BCF67533E872A75779C24C93D1D7085B72D364B;
 struct InputField_tABEA115F23FBD374EBE80D4FAC1D15BD6E37A140;
@@ -5768,6 +5769,24 @@ struct IndirectInstanceInfo_t94ECCE7BC6DF23C75D2354238F38A0008643F9DB
 {
 	int32_t ___drawOffsetAndSplitMask;
 	int32_t ___instanceIndexAndCrossFade;
+};
+struct InputActionProperty_tE5B1633784A72FC044A0BB5C0BE140DD7BD84FAD 
+{
+	bool ___m_UseReference;
+	InputAction_t1B550AD2B55AF322AFB53CD28DA64081220D01CD* ___m_Action;
+	InputActionReference_t64730C6B41271E0983FC21BFB416169F5D6BC4A1* ___m_Reference;
+};
+struct InputActionProperty_tE5B1633784A72FC044A0BB5C0BE140DD7BD84FAD_marshaled_pinvoke
+{
+	int32_t ___m_UseReference;
+	InputAction_t1B550AD2B55AF322AFB53CD28DA64081220D01CD* ___m_Action;
+	InputActionReference_t64730C6B41271E0983FC21BFB416169F5D6BC4A1* ___m_Reference;
+};
+struct InputActionProperty_tE5B1633784A72FC044A0BB5C0BE140DD7BD84FAD_marshaled_com
+{
+	int32_t ___m_UseReference;
+	InputAction_t1B550AD2B55AF322AFB53CD28DA64081220D01CD* ___m_Action;
+	InputActionReference_t64730C6B41271E0983FC21BFB416169F5D6BC4A1* ___m_Reference;
 };
 struct InputDeviceDescription_tE86DD77422AAF60ADDAC788B31E5A05E739B708F 
 {
@@ -32316,6 +32335,7 @@ struct Notebook_t13C73C5B7293DC24AE20A08599EAA8C70BBADB54  : public MonoBehaviou
 	TextMeshProUGUI_t101091AF4B578BB534C92E9D1EEAF0611636D957* ___pageBodyText;
 	Image_tBC1D03F63BF71132E9A5E472B8742F172A011E7E* ___clueImageUI;
 	Animator_t8A52E42AE54F76681838FE9E632683EF3952E883* ___notebookAnimator;
+	InputActionProperty_tE5B1633784A72FC044A0BB5C0BE140DD7BD84FAD ___turnPageTriggerAction;
 	List_1_t63A9E4848284FB150CDD14AFB5C6F3112C55311A* ___notebookPages;
 	int32_t ___currentPageIndex;
 	XRGrabInteractable_tAE7E2F24377399C9B5159179E4B43EA6AA55531B* ___grabInteractable;
@@ -45219,9 +45239,9 @@ IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable8735[1] =
 IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable8736[3] = 
 {
 	static_cast<int32_t>(offsetof(NotebookPage_t98E04E3F834A728FE3F54E6EB05C73E970E787BD, ___title)) + static_cast<int32_t>(sizeof(RuntimeObject)),static_cast<int32_t>(offsetof(NotebookPage_t98E04E3F834A728FE3F54E6EB05C73E970E787BD, ___bodyText)) + static_cast<int32_t>(sizeof(RuntimeObject)),static_cast<int32_t>(offsetof(NotebookPage_t98E04E3F834A728FE3F54E6EB05C73E970E787BD, ___clueImage)) + static_cast<int32_t>(sizeof(RuntimeObject)),};
-IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable8737[8] = 
+IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable8737[9] = 
 {
-	static_cast<int32_t>(offsetof(Notebook_t13C73C5B7293DC24AE20A08599EAA8C70BBADB54, ___pageTitleText)),static_cast<int32_t>(offsetof(Notebook_t13C73C5B7293DC24AE20A08599EAA8C70BBADB54, ___pageBodyText)),static_cast<int32_t>(offsetof(Notebook_t13C73C5B7293DC24AE20A08599EAA8C70BBADB54, ___clueImageUI)),static_cast<int32_t>(offsetof(Notebook_t13C73C5B7293DC24AE20A08599EAA8C70BBADB54, ___notebookAnimator)),static_cast<int32_t>(offsetof(Notebook_t13C73C5B7293DC24AE20A08599EAA8C70BBADB54, ___notebookPages)),static_cast<int32_t>(offsetof(Notebook_t13C73C5B7293DC24AE20A08599EAA8C70BBADB54, ___currentPageIndex)),static_cast<int32_t>(offsetof(Notebook_t13C73C5B7293DC24AE20A08599EAA8C70BBADB54, ___grabInteractable)),static_cast<int32_t>(offsetof(Notebook_t13C73C5B7293DC24AE20A08599EAA8C70BBADB54, ___isHeld)),};
+	static_cast<int32_t>(offsetof(Notebook_t13C73C5B7293DC24AE20A08599EAA8C70BBADB54, ___pageTitleText)),static_cast<int32_t>(offsetof(Notebook_t13C73C5B7293DC24AE20A08599EAA8C70BBADB54, ___pageBodyText)),static_cast<int32_t>(offsetof(Notebook_t13C73C5B7293DC24AE20A08599EAA8C70BBADB54, ___clueImageUI)),static_cast<int32_t>(offsetof(Notebook_t13C73C5B7293DC24AE20A08599EAA8C70BBADB54, ___notebookAnimator)),static_cast<int32_t>(offsetof(Notebook_t13C73C5B7293DC24AE20A08599EAA8C70BBADB54, ___turnPageTriggerAction)),static_cast<int32_t>(offsetof(Notebook_t13C73C5B7293DC24AE20A08599EAA8C70BBADB54, ___notebookPages)),static_cast<int32_t>(offsetof(Notebook_t13C73C5B7293DC24AE20A08599EAA8C70BBADB54, ___currentPageIndex)),static_cast<int32_t>(offsetof(Notebook_t13C73C5B7293DC24AE20A08599EAA8C70BBADB54, ___grabInteractable)),static_cast<int32_t>(offsetof(Notebook_t13C73C5B7293DC24AE20A08599EAA8C70BBADB54, ___isHeld)),};
 IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable8738[3] = 
 {
 	static_cast<int32_t>(offsetof(TeleportRayToggle_tFA0A73FE150721A153A7BEAD76B70FDB8FE3E5CD, ___teleportModeAction)),static_cast<int32_t>(offsetof(TeleportRayToggle_tFA0A73FE150721A153A7BEAD76B70FDB8FE3E5CD, ___rayInteractor)),static_cast<int32_t>(offsetof(TeleportRayToggle_tFA0A73FE150721A153A7BEAD76B70FDB8FE3E5CD, ___lineRenderer)),};

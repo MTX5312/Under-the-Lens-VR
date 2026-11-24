@@ -3132,7 +3132,7 @@ Transform:
   m_GameObject: {fileID: 3909468523650264616}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 1, w: 0}
-  m_LocalPosition: {x: 0.2, y: -0.3, z: 0.5}
+  m_LocalPosition: {x: 0.2, y: 0.588, z: 0.5}
   m_LocalScale: {x: 0.04, y: 0.04, z: 0.04}
   m_ConstrainProportionsScale: 1
   m_Children:
@@ -3357,7 +3357,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3909468523650264616}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4723927c86fcef040b8f6399025a70ab, type: 3}
   m_Name: 
@@ -5436,7 +5436,7 @@ Transform:
   m_GameObject: {fileID: 5766917607982572136}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.1, y: -0.04, z: 0.2}
+  m_LocalPosition: {x: -0.1, y: 0.84800005, z: 0.2}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -5641,7 +5641,7 @@ Transform:
   m_GameObject: {fileID: 5799327296159851830}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1.5, z: 0}
+  m_LocalPosition: {x: 0, y: 1.8, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -6702,7 +6702,7 @@ Transform:
   m_GameObject: {fileID: 9005994331557993655}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.1, y: -0.04, z: 0.2}
+  m_LocalPosition: {x: 0.1, y: 0.84800005, z: 0.2}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -7164,7 +7164,7 @@ Transform:
   m_GameObject: {fileID: 9200761083195164407}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.2, y: -0.4, z: 0.5}
+  m_LocalPosition: {x: -0.2, y: 0.488, z: 0.5}
   m_LocalScale: {x: 0.04, y: 0.04, z: 0.04}
   m_ConstrainProportionsScale: 1
   m_Children:
@@ -7366,6 +7366,19 @@ MonoBehaviour:
   pageBodyText: {fileID: 2776706125270532006}
   clueImageUI: {fileID: 6063394570105366844}
   notebookAnimator: {fileID: 2577928104936932780}
+  turnPageTriggerAction:
+    m_UseReference: 1
+    m_Action:
+      m_Name: Turn Page Trigger
+      m_Type: 0
+      m_ExpectedControlType: 
+      m_Id: 47747fba-2e99-4d3d-b81d-2fad241f91ce
+      m_Processors: 
+      m_Interactions: 
+      m_SingletonActionBindings: []
+      m_Flags: 0
+      m_Priority: 0
+    m_Reference: {fileID: -5982496924579745919, guid: c348712bda248c246b8c49b3db54643f, type: 3}
   notebookPages:
   - title: 'Caso: Robo'
     bodyText: "He llegado a la casa del presunto ladr\xF3n.\nNo parece haber mucho a simple vista, deberia usar mi lupa para encontrar evidencia escondida."
@@ -7389,7 +7402,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 9200761083195164407}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4723927c86fcef040b8f6399025a70ab, type: 3}
   m_Name: 
